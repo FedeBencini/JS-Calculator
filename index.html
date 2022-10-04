@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora by FedeB</title>
+    <script src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container-fluid vh-100 d-flex align-items-center">
+    <main
+      class="container d-flex flex-column h-75 align-items-center"
+      id="calculator"
+    >
+      <div
+        id="pantalla"
+        class="w-100 m-3 h-25 d-flex flex-column justify-content-end"
+      >
+        <div
+          id="parcial"
+          class="col d-flex pe-3 justify-content-end align-items-end"
+        ></div>
+        <div id="resultado" class="col fw-semibold pe-3 text-end">0</div>
+      </div>
+      <div id="botones" class="w-100 mx-3 mb-3 h-75 d-flex">
+        <div id="nums" class="col-9">
+          <div class="d-flex flex-column h-100">
+            <div id="CEyC" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones"
+                onclick="borrarParteInf()"
+              >
+                CE
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones"
+                onclick="borrarTodo()"
+              >
+                C
+              </div>
+            </div>
+            <div id="sieteANueve" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('7')"
+              >
+                7
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('8')"
+              >
+                8
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('9')"
+              >
+                9
+              </div>
+            </div>
+            <div id="cuatroASeis" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('4')"
+              >
+                4
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('5')"
+              >
+                5
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('6')"
+              >
+                6
+              </div>
+            </div>
+            <div id="unoATres" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('1')"
+              >
+                1
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('2')"
+              >
+                2
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('3')"
+              >
+                3
+              </div>
+            </div>
+            <div id="ceroYVacio" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center"
+              ></div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('0')"
+              >
+                0
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="operaciones" class="col-3">
+          <div class="d-flex flex-column h-100">
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+              onclick="guardarValor('/')"
+            >
+              /
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+              onclick="guardarValor('*')"
+            >
+              *
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+              onclick="guardarValor('-')"
+            >
+              -
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+              onclick="guardarValor('+')"
+            >
+              +
+            </div>
+            <div
+              id="igual"
+              class="col d-flex justify-content-center align-items-center botones"
+              onclick="calcular()"
+            >
+              =
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

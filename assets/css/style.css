@@ -1,0 +1,43 @@
+#calculator {
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.8);
+  color: white;
+}
+
+.botones {
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid rgba(128, 128, 128, 0.8);
+}
+
+.botones:not(.numeros) {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.botones:not(.numeros):hover {
+  background-color: rgba(50, 50, 50);
+  transition: 0.25s;
+}
+
+.numeros {
+  background-color: rgba(27, 26, 26, 0.8);
+}
+
+.numeros:hover {
+  background-color: rgb(27, 26, 26);
+  transition: 0.25s;
+}
+
+#igual {
+  background-color: rgba(70, 131, 180, 0.8);
+}
+
+#igual:hover {
+  font-weight: bolder;
+  background-color: rgb(110, 179, 235);
+  transition: 0.25s;
+}
+
+#resultado {
+  font-size: 3.5rem;
+}
